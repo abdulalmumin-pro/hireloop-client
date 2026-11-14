@@ -1,19 +1,24 @@
-import { Button } from "@/components/ui/button"
+import { SiteHeader } from "@/components/site-header"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <div className="min-h-svh bg-page text-white">
+      <SiteHeader />
+
+      <main className="mx-auto min-h-[85svh] w-full max-w-[1440px] px-4 pt-16 pb-24 sm:px-6 lg:px-10 xl:px-[60px]">
+        <div className="mx-auto w-full max-w-[1320px]">
+          <p className="text-[13px] font-medium tracking-[0.3em] text-brand uppercase">
+            HireLoop
+          </p>
+          <h1 className="mt-5 max-w-2xl font-instrument text-4xl leading-[1.1] font-medium tracking-tight sm:text-5xl lg:text-6xl">
+            Find your next opportunity.
+          </h1>
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/60">
+            The responsive public navigation is ready. Connect its links to your
+            jobs, companies, pricing, and auth pages.
+          </p>
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+      </main>
     </div>
   )
 }
