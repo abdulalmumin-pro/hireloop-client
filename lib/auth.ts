@@ -1,7 +1,13 @@
 import { betterAuth } from "better-auth"
 import { MongoClient } from "mongodb"
 import { mongodbAdapter } from "@better-auth/mongo-adapter"
-const client = new MongoClient("mongodb://localhost:27017/database")
+const mongoUri = process.env.BETTER_AUTH_DB_URI
+
+if (!mongoUri) {
+  throw new Error("BETTER_AUTH_DB_URI is not set")
+}
+
+const client = new MongoClient(mongoUri)
 const db = client.db("hireloopdb")
 
 export const auth = betterAuth({
