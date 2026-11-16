@@ -33,7 +33,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-page">
       <div className="mx-auto w-full max-w-[1440px] px-4 pt-4 sm:px-6 lg:px-10 xl:px-[60px] xl:pt-6">
-        <div className="flex h-16 w-full items-center justify-between gap-4 rounded-[16px] bg-navbar pr-2 pl-4 sm:h-[74px] sm:pl-6 lg:pr-0">
+        <div className="flex h-16 w-full items-center justify-between gap-4 rounded-[16px] bg-navbar pl-4 pr-2 sm:h-[74px] sm:pl-6">
           <Link
             href="/"
             aria-label="HireLoop home"
@@ -47,10 +47,7 @@ export function SiteHeader() {
             />
           </Link>
 
-          <nav
-            aria-label="Main navigation"
-            className="hidden items-center lg:flex"
-          >
+          <nav aria-label="Main navigation" className="hidden items-center lg:flex">
             <div className="flex items-center gap-10 pl-8">
               {navLinks.map((link) => (
                 <Link
@@ -67,16 +64,14 @@ export function SiteHeader() {
 
             <div className="flex items-center gap-4 pr-2">
               <Button
-                nativeButton={false}
                 render={<Link href={actionLinks[0].href} />}
-                className="h-[58px] rounded-[12px] bg-white px-6 font-manrope text-[18px] font-semibold text-brand shadow-none hover:bg-white/90 hover:text-brand"
+                className="h-[58px] rounded-[12px] bg-white px-6 text-[18px] font-manrope font-semibold text-brand shadow-none hover:bg-white/90 hover:text-brand"
               >
                 {actionLinks[0].label}
               </Button>
               <Button
-                nativeButton={false}
                 render={<Link href={actionLinks[1].href} />}
-                className="h-[52px] rounded-[12px] bg-brand px-6 font-instrument text-[18px] font-medium text-white shadow-none hover:bg-brand/90"
+                className="h-[52px] rounded-[12px] bg-brand px-6 text-[18px] font-instrument font-medium text-white shadow-none hover:bg-brand/90"
               >
                 {actionLinks[1].label}
               </Button>
@@ -143,26 +138,24 @@ export function SiteHeader() {
 
               <div className="mt-auto space-y-3 border-t border-white/10 p-5">
                 <Button
-                  nativeButton={false}
                   render={
                     <Link
                       href={actionLinks[0].href}
                       onClick={() => setOpen(false)}
                     />
                   }
-                  className="h-[52px] w-full rounded-[12px] bg-white font-manrope text-[18px] font-semibold text-brand shadow-none hover:bg-white/90 hover:text-brand"
+                  className="h-[52px] w-full rounded-[12px] bg-white text-[18px] font-manrope font-semibold text-brand shadow-none hover:bg-white/90 hover:text-brand"
                 >
                   {actionLinks[0].label}
                 </Button>
                 <Button
-                  nativeButton={false}
                   render={
                     <Link
                       href={actionLinks[1].href}
                       onClick={() => setOpen(false)}
                     />
                   }
-                  className="h-[52px] w-full rounded-[12px] bg-brand font-instrument text-[18px] font-medium text-white shadow-none hover:bg-brand/90"
+                  className="h-[52px] w-full rounded-[12px] bg-brand text-[18px] font-instrument font-medium text-white shadow-none hover:bg-brand/90"
                 >
                   {actionLinks[1].label}
                 </Button>

@@ -9,6 +9,10 @@
     --font-sans: var(--font-sans);
     --font-manrope: var(--font-manrope-face);
     --font-instrument: var(--font-instrument-face);
+    --font-space-mono: var(--font-space-mono-face);
+    --font-plus-jakarta: var(--font-plus-jakarta-face);
+    --font-inter-tight: var(--font-inter-tight-face);
+    --font-satoshi: var(--font-satoshi-face);
     --color-brand: #5c53fe;
     --color-brand-foreground: #ffffff;
     --color-navbar: #222222;
